@@ -1,0 +1,49 @@
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+}
+
+#sidebar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30%;
+    height: 87%;
+    box-sizing: border-box;
+    overflow: auto;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    background-color: #e3f2fd;
+}
+
+#map {
+    margin-top: 5px;
+    flex-basis: 0;
+    flex-grow: 4;
+    height: 87%;
+}
+
+
+#map {
+    flex: auto;
+}
+
+#sidebar {
+    flex: 0 1 auto;
+    padding: 0;
+}
+#sidebar > div {
+    padding: 0.5rem;
+}
+#directions-panel{
+    text-align: center;
+}
