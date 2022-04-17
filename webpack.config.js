@@ -76,9 +76,13 @@ module.exports = (env) => {
                           template: "src/about.html",
                           filename: "about.html",
                       }),
+                      new HtmlWebpackPlugin({
+                          template: "src/contact.html",
+                          filename: "contact.html",
+                      }),
                       new MiniCssExtractPlugin({
                           filename: "style.css",
-                      }),
+                      })
                   ]
         ),
         devServer: {

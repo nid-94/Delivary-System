@@ -90,9 +90,9 @@ function initMap(): void {
         }
         duration=`${hours} heures ${minutes} minutes`
         let totale=(document.getElementById( "total") as HTMLElement);
-        totale.innerHTML="total Distance "+total +" km";
+        totale.innerHTML="TOTAL DISTANCE : "+total +" km";
         let duree=(document.getElementById( "duration") as HTMLElement);
-        duree.innerHTML="total Duration "+duration ;
+        duree.innerHTML="TOTAL DURATION : "+duration ;
       })
       .catch((e) => window.alert("Directions request failed due to " + status));
   }
