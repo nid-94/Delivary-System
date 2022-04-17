@@ -10,7 +10,7 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
-                    test: /\.(tsx|ts|js)$/,
+                    test: /\.(tsx|ts|js|jsx)$/,
                     loader: "string-replace-loader",
                     options: {
                         search: /YOUR_API_KEY/g,
@@ -60,6 +60,7 @@ module.exports = (env) => {
                       new HtmlWebpackPlugin({
                           template: "src/login.html",
                           filename: "login.html",
+                        
                       }),
                       new HtmlWebpackPlugin({
                           template: "src/index.html",
