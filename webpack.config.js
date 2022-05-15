@@ -50,7 +50,7 @@ module.exports = (env) => {
         output: {
             path: `${__dirname}/public`,
             publicPath: "/",
-            filename: "index.js",
+            filename: "[name].js",
             libraryTarget: "window",
         },
         plugins: [].concat(
@@ -60,10 +60,9 @@ module.exports = (env) => {
                       new HtmlWebpackPlugin({
                           template: "src/login.html",
                           filename: "login.html",
-                        
                       }),
                       new HtmlWebpackPlugin({
-                          template: "src/index.html",
+                          template: "src/login.html",
                           inject: false,
                       }),
                       new HtmlReplaceWebpackPlugin([
@@ -74,16 +73,20 @@ module.exports = (env) => {
                       ]),
 
                       new HtmlWebpackPlugin({
-                          template: "src/about.html",
-                          filename: "about.html",
+                          template: "src/map.html",
+                          filename:"map.html"
                       }),
                       new HtmlWebpackPlugin({
                           template: "src/contact.html",
                           filename: "contact.html",
                       }),
+                      new HtmlWebpackPlugin({
+                          template: "src/about.html",
+                          filename: "about.html",
+                      }),
                       new MiniCssExtractPlugin({
                           filename: "style.css",
-                      })
+                      }),
                   ]
         ),
         devServer: {
