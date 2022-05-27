@@ -42,6 +42,7 @@ module.exports = (env) => {
                     exclude: /node_modules/,
                     use: [MiniCssExtractPlugin.loader, "css-loader"],
                 },
+                
             ],
         },
         resolve: {
@@ -74,7 +75,7 @@ module.exports = (env) => {
 
                       new HtmlWebpackPlugin({
                           template: "src/map.html",
-                          filename:"map.html"
+                          filename: "map.html",
                       }),
                       new HtmlWebpackPlugin({
                           template: "src/contact.html",
